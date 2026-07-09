@@ -234,6 +234,11 @@ h3{font-size:1.28rem;letter-spacing:-.01em}
 .cat-head h3{font-size:1.45rem}
 .clip-fig{margin:0}
 .clip-fig figcaption{font-family:var(--font-head);font-weight:400;font-size:.8rem;color:#8FA6AC;margin-top:.55rem}
+/* click-to-play video grid */
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1rem;margin-top:1.4rem}
+.vid-card{margin:0}
+.vid-card video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#0A2C36;display:block;cursor:pointer}
+.vid-card figcaption{font-family:var(--font-head);font-weight:400;font-size:.8rem;color:#8FA6AC;margin-top:.5rem}
 .gallery-label{font-family:var(--font-head);font-weight:500;font-size:.8rem;color:var(--aqua);
   text-transform:lowercase;letter-spacing:.02em;margin:1.5rem 0 .2rem}
 /* lightbox */
