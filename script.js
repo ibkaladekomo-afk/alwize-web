@@ -14,6 +14,18 @@ links.querySelectorAll('a').forEach(a =>
   a.addEventListener('click', () => links.classList.remove('open'))
 );
 
+// 2b. Reliable in-page anchor scrolling (CSS scroll-behavior is unreliable on some browsers)
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href').slice(1);
+    const el = id && document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 84, behavior: 'instant' });
+    if (links) links.classList.remove('open');
+  });
+});
+
 // 3. Scroll reveal
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
