@@ -43,6 +43,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:600;letter-spacing:-.02em;line
 /* ---------- layout helpers ---------- */
 .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
 .section{padding-block:var(--sect)}
+section[id],#top{scroll-margin-top:84px}
 .eyebrow{
   font-family:var(--font-head);font-weight:500;font-size:.74rem;
   letter-spacing:.22em;text-transform:uppercase;color:var(--teal);
