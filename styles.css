@@ -159,6 +159,22 @@ h3{font-size:1.28rem;letter-spacing:-.01em}
 .enterprise .tier{color:var(--aqua)}
 .enterprise p{color:#C7D6DA;font-size:.95rem}
 .fineprint{text-align:center;color:var(--slate);font-size:.85rem;margin-top:1.6rem}
+/* pricing toggle + one-time */
+.price-toggle{display:inline-flex;gap:4px;background:#E4EBED;border-radius:100px;padding:5px;margin:1.8rem 0 .3rem}
+.pt-btn{font-family:var(--font-head);font-weight:500;font-size:.95rem;border:0;background:transparent;
+  color:var(--slate);padding:.62em 1.4em;border-radius:100px;cursor:pointer;transition:background .2s,color .2s}
+.pt-btn.active{background:var(--ink);color:#fff}
+.plan-panel[hidden]{display:none}
+.alacarte-row{margin-top:1.4rem;align-items:start}
+.alacarte h4,.credit-note h4{font-family:var(--font-head);font-weight:600;text-transform:lowercase;font-size:1.15rem;letter-spacing:-.01em}
+.alacarte h4{color:var(--ink);margin-bottom:.4rem}
+.alacarte ul{list-style:none;display:flex;flex-direction:column}
+.alacarte li{display:flex;justify-content:space-between;gap:1rem;padding:.72rem 0;border-bottom:1px solid var(--line);font-size:.98rem;color:var(--graphite)}
+.alacarte .ac-price{font-family:var(--font-head);font-weight:600;color:var(--ink);white-space:nowrap}
+.credit-note{background:var(--teal);color:#fff;border-radius:16px;padding:1.7rem 1.9rem;align-self:start}
+.credit-note h4{color:#fff;margin-bottom:.6rem}
+.credit-note p{color:#D3EDEA;margin-bottom:1.3rem}
+.credit-note strong{color:#fff;font-weight:600}
 
 /* founding band */
 .founding .wrap{text-align:center;display:flex;flex-direction:column;align-items:center}

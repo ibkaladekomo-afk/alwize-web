@@ -114,62 +114,131 @@
 <section class="section section-mist" id="pricing">
   <div class="wrap">
     <span class="eyebrow reveal">Pricing</span>
-    <h2 class="title reveal">big-business marketing, small-business budget</h2>
-    <p class="lead reveal">One flat monthly price. No hiring, no payroll, no contracts.</p>
-    <div class="pricing">
-      <div class="card reveal">
-        <div class="tier">starter</div>
-        <div class="price">$299<span> /mo</span></div>
-        <div class="best">Best for brand-new businesses</div>
-        <ul>
-          <li>8 branded social posts / mo</li>
-          <li>2 custom flyers</li>
-          <li>1 short promo video</li>
-          <li>Basic email campaign</li>
-          <li>Monthly performance report</li>
-        </ul>
-        <a href="#contact" class="btn btn-dark">Get started</a>
-      </div>
-      <div class="card feature reveal">
-        <div class="badge">most popular</div>
-        <div class="tier">growth</div>
-        <div class="price">$599<span> /mo</span></div>
-        <div class="best">Best for businesses ready to scale</div>
-        <ul>
-          <li>20 branded social posts / mo</li>
-          <li>8 custom graphics</li>
-          <li>4 short videos</li>
-          <li>Website updates</li>
-          <li>Email + SMS campaigns</li>
-          <li>Analytics dashboard</li>
-          <li>Monthly strategy session</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary">Get started</a>
-      </div>
-      <div class="card reveal">
-        <div class="tier">premium</div>
-        <div class="price">$999<span> /mo</span></div>
-        <div class="best">Best for busy, growing teams</div>
-        <ul>
-          <li>Everything in Growth, plus:</li>
-          <li>Design-request queue (~2-day)</li>
-          <li>Weekly video content</li>
-          <li>Full website management</li>
-          <li>Automation + AI chatbot</li>
-          <li>Ad creative production</li>
-          <li>Priority turnaround</li>
-        </ul>
-        <a href="#contact" class="btn btn-dark">Get started</a>
-      </div>
+    <h2 class="title reveal">two ways to work with us</h2>
+    <p class="lead reveal">Go month-to-month, or launch your brand with a one-time project. No contracts either way.</p>
+
+    <div class="price-toggle" role="tablist" aria-label="Pricing type">
+      <button class="pt-btn active" data-plan="monthly" type="button">Monthly plans</button>
+      <button class="pt-btn" data-plan="onetime" type="button">One-time projects</button>
     </div>
-    <div class="enterprise reveal">
-      <div>
-        <div class="tier" style="font-family:var(--font-head);font-weight:600;font-size:1.1rem">enterprise — from $1,500/mo</div>
-        <p>Multi-location &amp; higher volume, tailored to you.</p>
+
+    <!-- MONTHLY -->
+    <div class="plan-panel" data-panel="monthly">
+      <div class="pricing">
+        <div class="card">
+          <div class="tier">starter</div>
+          <div class="price">$299<span> /mo</span></div>
+          <div class="best">Best for brand-new businesses</div>
+          <ul>
+            <li>8 branded social posts / mo</li>
+            <li>2 custom flyers</li>
+            <li>1 short promo video</li>
+            <li>Basic email campaign</li>
+            <li>Monthly performance report</li>
+          </ul>
+          <a href="#contact" class="btn btn-dark">Get started</a>
+        </div>
+        <div class="card feature">
+          <div class="badge">most popular</div>
+          <div class="tier">growth</div>
+          <div class="price">$599<span> /mo</span></div>
+          <div class="best">Best for businesses ready to scale</div>
+          <ul>
+            <li>20 branded social posts / mo</li>
+            <li>8 custom graphics</li>
+            <li>4 short videos</li>
+            <li>Website updates</li>
+            <li>Email + SMS campaigns</li>
+            <li>Analytics dashboard</li>
+            <li>Monthly strategy session</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get started</a>
+        </div>
+        <div class="card">
+          <div class="tier">premium</div>
+          <div class="price">$999<span> /mo</span></div>
+          <div class="best">Best for busy, growing teams</div>
+          <ul>
+            <li>Everything in Growth, plus:</li>
+            <li>Design-request queue (~2-day)</li>
+            <li>Weekly video content</li>
+            <li>Full website management</li>
+            <li>Automation + AI chatbot</li>
+            <li>Ad creative production</li>
+            <li>Priority turnaround</li>
+          </ul>
+          <a href="#contact" class="btn btn-dark">Get started</a>
+        </div>
       </div>
-      <a href="#contact" class="btn btn-primary">Talk to us</a>
+      <div class="enterprise">
+        <div>
+          <div class="tier" style="font-family:var(--font-head);font-weight:600;font-size:1.1rem">enterprise — from $1,500/mo</div>
+          <p>Multi-location &amp; higher volume, tailored to you.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary">Talk to us</a>
+      </div>
+      <p class="fineprint">Every plan human-reviewed, not just AI-generated · One-time onboarding from $500 · Save 2 months with annual billing · Cancel anytime.</p>
     </div>
-    <p class="fineprint reveal">Every plan human-reviewed, not just AI-generated · One-time onboarding from $500 · Save 2 months with annual billing · Cancel anytime.</p>
+
+    <!-- ONE-TIME -->
+    <div class="plan-panel" data-panel="onetime" hidden>
+      <div class="pricing">
+        <div class="card">
+          <div class="tier">starter</div>
+          <div class="price">$349<span> one-time</span></div>
+          <div class="best">Brand starter — a clean, consistent first look</div>
+          <ul>
+            <li>Logo &amp; mini brand kit</li>
+            <li>8 branded social posts</li>
+            <li>2 custom graphics</li>
+          </ul>
+          <a href="#contact" class="btn btn-dark">Get started</a>
+        </div>
+        <div class="card feature">
+          <div class="badge">most popular</div>
+          <div class="tier">growth</div>
+          <div class="price">$899<span> one-time</span></div>
+          <div class="best">Launch package — a full online presence, fast</div>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>5-page website, built &amp; handed over</li>
+            <li>1 campaign video</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get started</a>
+        </div>
+        <div class="card">
+          <div class="tier">premium</div>
+          <div class="price">$1,499<span> one-time</span></div>
+          <div class="best">Full launch — a complete, done-for-you launch</div>
+          <ul>
+            <li>Everything in Growth</li>
+            <li>Product imagery set (5 visuals)</li>
+            <li>2 campaign videos</li>
+            <li>16 posts, scheduled &amp; ready</li>
+          </ul>
+          <a href="#contact" class="btn btn-dark">Get started</a>
+        </div>
+      </div>
+      <div class="split alacarte-row">
+        <div class="alacarte">
+          <h4>or build à la carte</h4>
+          <ul>
+            <li><span>Website</span><span class="ac-price">from $499</span></li>
+            <li><span>Social post pack (8+2)</span><span class="ac-price">$149</span></li>
+            <li><span>Product imagery (5)</span><span class="ac-price">$129</span></li>
+            <li><span>Campaign video</span><span class="ac-price">$179</span></li>
+            <li><span>Logo &amp; brand kit</span><span class="ac-price">$249</span></li>
+            <li><span>Single flyer / graphic</span><span class="ac-price">$59</span></li>
+          </ul>
+        </div>
+        <div class="credit-note">
+          <h4>thinking longer-term?</h4>
+          <p>Any one-time project credits <strong>20% toward your first month</strong> if you switch to a monthly plan.</p>
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+        </div>
+      </div>
+      <p class="fineprint">Intro rates — locked while we launch · No subscription required.</p>
+    </div>
   </div>
 </section>
 

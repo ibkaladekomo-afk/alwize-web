@@ -37,6 +37,15 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
+// 4b. Pricing toggle (monthly / one-time)
+document.querySelectorAll('.pt-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const plan = btn.dataset.plan;
+    document.querySelectorAll('.pt-btn').forEach(b => b.classList.toggle('active', b === btn));
+    document.querySelectorAll('.plan-panel').forEach(p => { p.hidden = p.dataset.panel !== plan; });
+  });
+});
+
 // 5. Lightbox for work gallery
 const lb = document.getElementById('lb');
 if (lb) {
