@@ -164,8 +164,12 @@ h3{font-size:1.28rem;letter-spacing:-.01em}
 /* pricing toggle + one-time */
 .price-toggle{display:inline-flex;gap:4px;background:#E4EBED;border-radius:100px;padding:5px;margin:1.8rem 0 .3rem}
 .pt-btn{font-family:var(--font-head);font-weight:500;font-size:.95rem;border:0;background:transparent;
-  color:var(--slate);padding:.62em 1.4em;border-radius:100px;cursor:pointer;transition:background .2s,color .2s}
+  color:var(--ink);padding:.62em 1.4em;border-radius:100px;cursor:pointer;transition:background .2s,color .2s;
+  display:inline-flex;align-items:center;gap:.5em}
+.pt-btn:hover:not(.active){background:rgba(14,58,70,.07)}
 .pt-btn.active{background:var(--ink);color:#fff}
+.pt-badge{background:var(--aqua);color:var(--aqua-ink);font-size:.66rem;font-weight:600;
+  padding:.28em .65em;border-radius:100px;letter-spacing:.03em;text-transform:uppercase;line-height:1}
 .plan-panel[hidden]{display:none}
 .alacarte-row{margin-top:1.4rem;align-items:start}
 .alacarte h4,.credit-note h4{font-family:var(--font-head);font-weight:600;text-transform:lowercase;font-size:1.15rem;letter-spacing:-.01em}
