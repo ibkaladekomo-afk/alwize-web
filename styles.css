@@ -173,6 +173,15 @@ h3{font-size:1.28rem;letter-spacing:-.01em}
 .alacarte ul{list-style:none;display:flex;flex-direction:column}
 .alacarte li{display:flex;justify-content:space-between;gap:1rem;padding:.72rem 0;border-bottom:1px solid var(--line);font-size:.98rem;color:var(--graphite)}
 .alacarte .ac-price{font-family:var(--font-head);font-weight:600;color:var(--ink);white-space:nowrap}
+.ac-help{font-size:.86rem;color:var(--slate);margin:-.1rem 0 .5rem}
+.alacarte .ac-buy{font-family:var(--font-head);font-weight:600;font-size:.92rem;color:var(--ink);white-space:nowrap;
+  text-decoration:none;border:1.5px solid var(--line);padding:.32em .9em;border-radius:100px;transition:all .18s ease}
+.alacarte .ac-buy:hover{background:var(--aqua);border-color:var(--aqua);color:var(--aqua-ink);transform:translateY(-1px)}
+.alacarte .ac-buy.quote{border-style:dashed;color:var(--slate)}
+.alacarte .ac-buy.quote:hover{color:var(--aqua-ink)}
+.pay-note{font-size:.78rem;color:var(--slate);text-align:center;margin-top:.6rem;line-height:1.5}
+.pay-note a{color:var(--teal);font-weight:500;text-decoration:underline;text-underline-offset:2px}
+.pay-note a:hover{color:var(--ink)}
 .credit-note{background:var(--teal);color:#fff;border-radius:16px;padding:1.7rem 1.9rem;align-self:start}
 .credit-note h4{color:#fff;margin-bottom:.6rem}
 .credit-note p{color:#D3EDEA;margin-bottom:1.3rem}
