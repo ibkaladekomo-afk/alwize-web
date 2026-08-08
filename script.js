@@ -88,6 +88,13 @@ form.addEventListener('submit', async (e) => {
       headers: { Accept: 'application/json' }
     });
     if (res.ok) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18377261128/ZBj4CJv1nd4cEMiA-7pE',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+      }
       form.reset();
       status.textContent = "Thanks — we'll be in touch within one business day.";
       status.className = 'form-status ok';
