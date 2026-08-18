@@ -83,6 +83,39 @@ if (lb) {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('open'); });
 }
 
-// 6. Contact form submits natively to Formspree, which redirects to /thanks.html on
-//    success (the _next field). Native POST lets Formspree apply its spam filtering and
-//    honeypot BEFORE a lead counts — and the thank-you page is the real conversion point.
+// 6. Contact form — AJAX submit to Formspree (JSON mode works on the free tier;
+//    the _next redirect is a paid feature, so we do the redirect ourselves).
+//    Formspree still applies its spam filtering + the _gotcha honeypot server-side
+//    before returning ok, so we only land on /thanks.html — where the Google Ads
+//    conversion fires — on genuinely accepted leads.
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const label = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    try {
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        window.location.href = '/thanks.html';
+        return;
+      }
+      let msg = 'Something went wrong. Please email ask@getalwize.com.';
+      try {
+        const data = await res.json();
+        if (data && data.errors && data.errors.length) {
+          msg = data.errors.map(x => x.message).join(', ');
+        }
+      } catch (_) {}
+      alert(msg);
+    } catch (_) {
+      alert('Network error — please email ask@getalwize.com.');
+    }
+    if (btn) { btn.disabled = false; btn.textContent = label; }
+  });
+}
