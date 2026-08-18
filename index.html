@@ -2,16 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18377261128"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18377261128');
-</script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>alwize — marketing that runs itself</title>
 <meta name="description" content="Your entire marketing department — content, design, video, email, and reporting — for one flat monthly price. Produced fast, perfected by a real person. From $299/mo.">
@@ -369,11 +359,13 @@
 <!-- CONTACT -->
 <section class="section section-dark contact" id="contact">
   <div class="wrap">
-    <span class="eyebrow reveal">Get started</span>
-    <h2 class="title reveal" style="max-width:20ch">ready for marketing that runs itself?</h2>
-    <p class="lead reveal" style="text-align:center">Tell us about your business. We'll be in touch within one business day.</p>
-    <!-- Replace REPLACE_ME with your Formspree form ID (see README) -->
-    <form class="form reveal" id="contactForm" action="https://formspree.io/f/meebbqba" method="POST">
+    <span class="eyebrow">Get started</span>
+    <h2 class="title" style="max-width:20ch">ready for marketing that runs itself?</h2>
+    <p class="lead" style="text-align:center">Tell us about your business. We'll be in touch within one business day.</p>
+    <form class="form" id="contactForm" action="https://formspree.io/f/meebbqba" method="POST">
+      <input type="hidden" name="_next" value="https://getalwize.com/thanks.html">
+      <input type="hidden" name="_subject" value="New enquiry from getalwize.com">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="row">
         <div><label for="name">Name</label><input id="name" name="name" type="text" required></div>
         <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
@@ -381,7 +373,6 @@
       <div><label for="business">Business name</label><input id="business" name="business" type="text"></div>
       <div><label for="message">What do you need help with?</label><textarea id="message" name="message"></textarea></div>
       <button type="submit" class="btn btn-primary">Get started</button>
-      <p class="form-status" id="formStatus" aria-live="polite"></p>
     </form>
     <p class="email">Prefer email? <a href="mailto:ask@getalwize.com">ask@getalwize.com</a></p>
   </div>

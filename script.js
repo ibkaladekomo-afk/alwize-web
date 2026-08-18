@@ -34,6 +34,20 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// 3b. If the page loads (or changes) to a #hash, reveal that section immediately.
+//     Ad clicks land straight on an anchor, where the scroll observer never fires
+//     for the target — this stops the section rendering invisible.
+function revealHash() {
+  const id = location.hash.slice(1);
+  if (!id) return;
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.add('in');
+  el.querySelectorAll('.reveal').forEach(e => e.classList.add('in'));
+}
+revealHash();
+window.addEventListener('hashchange', revealHash);
+
 // 4. FAQ accordion
 document.querySelectorAll('.faq-item').forEach(item => {
   const q = item.querySelector('.faq-q');
@@ -69,40 +83,6 @@ if (lb) {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.classList.remove('open'); });
 }
 
-// 6. Contact form -> Formspree (AJAX, no page reload)
-const form = document.getElementById('contactForm');
-const status = document.getElementById('formStatus');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  if (form.action.includes('REPLACE_ME')) {
-    status.textContent = 'Form not connected yet — add your Formspree ID (see README).';
-    status.className = 'form-status err';
-    return;
-  }
-  status.textContent = 'Sending…';
-  status.className = 'form-status';
-  try {
-    const res = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
-    });
-    if (res.ok) {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18377261128/ZBj4CJv1nd4cEMiA-7pE',
-          'value': 1.0,
-          'currency': 'USD'
-        });
-      }
-      form.reset();
-      status.textContent = "Thanks — we'll be in touch within one business day.";
-      status.className = 'form-status ok';
-    } else {
-      throw new Error('bad response');
-    }
-  } catch {
-    status.textContent = 'Something went wrong. Please email ask@getalwize.com.';
-    status.className = 'form-status err';
-  }
-});
+// 6. Contact form submits natively to Formspree, which redirects to /thanks.html on
+//    success (the _next field). Native POST lets Formspree apply its spam filtering and
+//    honeypot BEFORE a lead counts — and the thank-you page is the real conversion point.
