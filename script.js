@@ -92,6 +92,20 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    // SMS consent — stamp the record ONLY when the box is checked. An unchecked
+    // box submits no sms_consent value at all, so a phone number alone never counts
+    // as consent. This keeps SMS opt-in separate from the contact/email submission.
+    const smsBox = document.getElementById('smsConsent');
+    const stamp = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+    if (smsBox && smsBox.checked) {
+      stamp('smsConsentTimestamp', new Date().toISOString());
+      stamp('smsConsentUrl', window.location.href);
+      stamp('smsConsentVersion', 'Alwize SMS Consent v1 — 2026-08-20');
+    } else {
+      stamp('smsConsentTimestamp', '');
+      stamp('smsConsentUrl', '');
+      stamp('smsConsentVersion', '');
+    }
     const btn = contactForm.querySelector('button[type="submit"]');
     const label = btn ? btn.textContent : '';
     if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
