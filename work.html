@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>alwize — work we've done</title>
+<meta name="description" content="The alwize portfolio — websites, brand kits, and social media content produced for real small businesses. AI-fast, human-perfected.">
+<meta name="theme-color" content="#0E3A46">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18377261128"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18377261128');
+</script>
+
+<!-- Open Graph -->
+<meta property="og:title" content="alwize — work we've done">
+<meta property="og:description" content="Websites, brand kits, and social media content produced for real small businesses.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getalwize.com/work.html">
+<meta property="og:image" content="https://getalwize.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="alwize — work we've done">
+<meta name="twitter:image" content="https://getalwize.com/og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ---- portfolio page ---- */
+.pf-hero{background:var(--ink);color:var(--white);padding:calc(84px + clamp(40px,7vw,72px)) 0 0}
+.pf-hero .lead{color:#C7D6DA}
+.pf-page{background:var(--ink);color:var(--white);padding-bottom:var(--sect)}
+.pf-tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:2.2rem 0 0;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:0}
+.pf-tab{font-family:var(--font-head);font-weight:500;font-size:.95rem;color:#8FA6AC;background:none;border:none;cursor:pointer;padding:.75rem 1rem;border-bottom:2.5px solid transparent;letter-spacing:.01em;transition:color .2s,border-color .2s}
+.pf-tab:hover{color:var(--white)}
+.pf-tab.active{color:var(--aqua);border-bottom-color:var(--aqua)}
+.pf-panel{display:none;padding-top:2.4rem}
+.pf-panel.active{display:block}
+.pf-note{font-size:.92rem;color:#8FA6AC;max-width:60ch;margin-top:.4rem}
+
+/* website cards */
+.wsite-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;margin-top:1.6rem}
+.wsite-card{display:block;border-radius:16px;overflow:hidden;background:#0A2C36;border:1px solid rgba(255,255,255,.08);transition:transform .25s,box-shadow .25s}
+.wsite-card:hover{transform:translateY(-4px);box-shadow:0 22px 46px -24px rgba(0,0,0,.6)}
+.wsite-shot{aspect-ratio:16/10;overflow:hidden;background:#10394A}
+.wsite-shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.wsite-info{padding:1.1rem 1.25rem 1.25rem}
+.wsite-name{font-family:var(--font-head);font-weight:600;font-size:1.05rem;color:var(--white);display:block}
+.wsite-desc{font-size:.88rem;color:#AFC3C8;display:block;margin-top:.15rem}
+.wsite-go{font-family:var(--font-head);font-weight:500;font-size:.82rem;color:var(--aqua);display:block;margin-top:.7rem}
+
+/* sub-tabs + filter chips */
+.pf-subtabs{display:flex;gap:.55rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.pf-subtab{font-family:var(--font-head);font-weight:500;font-size:.85rem;border-radius:999px;padding:.5rem 1.15rem;border:1px solid rgba(255,255,255,.22);background:transparent;color:#C7D6DA;cursor:pointer;transition:all .2s}
+.pf-subtab:hover{border-color:var(--aqua);color:var(--aqua)}
+.pf-subtab.active{background:var(--aqua);border-color:var(--aqua);color:var(--aqua-ink)}
+.pf-chips{display:flex;gap:.45rem;flex-wrap:wrap;margin:0 0 1.2rem}
+.pf-chip{font-family:var(--font-head);font-size:.76rem;font-weight:500;border-radius:999px;padding:.32rem .85rem;border:1px solid rgba(255,255,255,.16);background:transparent;color:#8FA6AC;cursor:pointer;transition:all .2s}
+.pf-chip:hover{color:var(--white);border-color:rgba(255,255,255,.4)}
+.pf-chip.active{background:rgba(45,212,191,.14);border-color:var(--aqua);color:var(--aqua)}
+.pf-hidden{display:none !important}
+@media (max-width:560px){.pf-tab{font-size:.86rem;padding:.65rem .7rem}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav scrolled" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark"><span class="dot"></span>alwize</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#how">How it works</a>
+      <a href="work.html" style="color:var(--aqua)">Work</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact" class="btn btn-primary nav-cta">Get started</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="pf-hero">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--aqua)">Portfolio</span>
+    <h1 style="font-size:clamp(2.2rem,5.5vw,3.6rem);margin:.5rem 0 1rem">work we've done</h1>
+    <p class="lead">Real deliverables for real businesses — websites, brand kits, and social media content. AI-fast, perfected by a real person before it ships.</p>
+
+    <div class="pf-tabs" role="tablist">
+      <button class="pf-tab active" data-tab="websites" role="tab">Websites</button>
+      <button class="pf-tab" data-tab="brandkits" role="tab">Brand kits</button>
+      <button class="pf-tab" data-tab="social" role="tab">Social media content</button>
+    </div>
+  </div>
+</section>
+
+<section class="pf-page">
+  <div class="wrap">
+
+    <!-- WEBSITES -->
+    <div class="pf-panel active" id="panel-websites">
+      <p class="pf-note">Sites we designed, built, and shipped. Click through — they're live.</p>
+      <div class="wsite-grid">
+        <a class="wsite-card" href="https://www.mercylandacademy.com/" target="_blank" rel="noopener">
+          <div class="wsite-shot"><img src="work/sites/mercyland.jpg" alt="Mercy Land Academy website" loading="lazy" width="1100" height="764"></div>
+          <div class="wsite-info">
+            <span class="wsite-name">Mercy Land Academy</span>
+            <span class="wsite-desc">Early childhood education — programs, tours &amp; enrollment</span>
+            <span class="wsite-go">visit mercylandacademy.com →</span>
+          </div>
+        </a>
+        <a class="wsite-card" href="https://gracekitchenllc.com/" target="_blank" rel="noopener">
+          <div class="wsite-shot"><img src="work/sites/gracekitchen.jpg" alt="Grace Kitchen website" loading="lazy" width="1100" height="764"></div>
+          <div class="wsite-info">
+            <span class="wsite-name">Grace Kitchen</span>
+            <span class="wsite-desc">Restaurant ordering site — menu, trays &amp; catering</span>
+            <span class="wsite-go">visit gracekitchenllc.com →</span>
+          </div>
+        </a>
+        <a class="wsite-card" href="https://lafricanakitchen.com" target="_blank" rel="noopener">
+          <div class="wsite-shot"><img src="work/sites/lafricana.jpg" alt="L'Africana Kitchen website" loading="lazy" width="1100" height="764"></div>
+          <div class="wsite-info">
+            <span class="wsite-name">L'Africana Kitchen</span>
+            <span class="wsite-desc">Restaurant site — brand, menu, and ordering</span>
+            <span class="wsite-go">visit lafricanakitchen.com →</span>
+          </div>
+        </a>
+        <a class="wsite-card" href="https://osywin-healthcare.netlify.app" target="_blank" rel="noopener">
+          <div class="wsite-shot"><img src="work/sites/osywin.jpg" alt="Osywin Healthcare website" loading="lazy" width="1100" height="764"></div>
+          <div class="wsite-info">
+            <span class="wsite-name">OSYWIN Healthcare Services</span>
+            <span class="wsite-desc">Mental health practice site — services &amp; appointments</span>
+            <span class="wsite-go">visit the live site →</span>
+          </div>
+        </a>
+        <a class="wsite-card" href="https://gatesleadershipconsulting.netlify.app/" target="_blank" rel="noopener">
+          <div class="wsite-shot"><img src="work/sites/gates.jpg" alt="GATES Leadership and Etiquette Consulting website" loading="lazy" width="1100" height="764"></div>
+          <div class="wsite-info">
+            <span class="wsite-name">GATES Leadership &amp; Etiquette</span>
+            <span class="wsite-desc">Consulting brand site — programs &amp; enrollment</span>
+            <span class="wsite-go">visit the live site →</span>
+          </div>
+        </a>
+        <a class="wsite-card" href="https://tastee-buds-ibukunaladekomo.vercel.app/" target="_blank" rel="noopener">
+          <div class="wsite-shot"><img src="work/sites/tasteebuds.jpg" alt="Tastee Buds website" loading="lazy" width="1100" height="764"></div>
+          <div class="wsite-info">
+            <span class="wsite-name">Tastee Buds</span>
+            <span class="wsite-desc">Luxury cakes &amp; sweet treats — custom orders</span>
+            <span class="wsite-go">visit the live site →</span>
+          </div>
+        </a>
+        <!-- MORE SITE CARDS GO HERE -->
+      </div>
+    </div>
+
+    <!-- BRAND KITS -->
+    <div class="pf-panel" id="panel-brandkits">
+      <p class="pf-note">Logos, colour systems, and brand foundations built from scratch.</p>
+      <div class="gallery" style="margin-top:1.6rem">
+        <figure><img src="work/lafricana_logo.jpg" alt="L'Africana logo" loading="lazy" width="1086" height="724"><figcaption>L'Africana — logo</figcaption></figure>
+        <figure><img src="work/lafricana_brand.jpg" alt="L'Africana colour system" loading="lazy" width="1254" height="1254"><figcaption>L'Africana — colour system</figcaption></figure>
+        <!-- MORE BRAND KIT IMAGES GO HERE -->
+      </div>
+    </div>
+
+    <!-- SOCIAL MEDIA CONTENT -->
+    <div class="pf-panel" id="panel-social">
+      <div class="pf-subtabs" role="tablist">
+        <button class="pf-subtab active" data-subtab="images">Images</button>
+        <button class="pf-subtab" data-subtab="videos">Videos</button>
+      </div>
+
+      <div id="social-images">
+        <div class="pf-chips" id="brandChips">
+          <button class="pf-chip active" data-brand="all">All</button>
+          <button class="pf-chip" data-brand="goldenthreads">Golden Threads Gifts</button>
+          <button class="pf-chip" data-brand="mercyland">Mercyland Academy</button>
+          <button class="pf-chip" data-brand="ut">Universal Transportation</button>
+          <button class="pf-chip" data-brand="pewpay">PewPay</button>
+          <button class="pf-chip" data-brand="agc">Amazing Grace Chapel</button>
+          <button class="pf-chip" data-brand="fulcheezy">Fulcheezy Organics</button>
+          <button class="pf-chip" data-brand="lafricana">L'Africana Kitchen</button>
+          <button class="pf-chip" data-brand="alwize">alwize (our own)</button>
+        </div>
+        <div class="gallery" id="socialGallery">
+          <figure data-brand="goldenthreads"><img src="work/social/goldenthreads_basket.jpg" alt="Golden Threads Gifts festive campaign flyer" loading="lazy" width="1100" height="1374"><figcaption>Golden Threads Gifts — festive campaign</figcaption></figure>
+          <figure data-brand="mercyland"><img src="work/social/mercyland_grow.jpg" alt="Mercyland Academy programs flyer" loading="lazy" width="1024" height="1536"><figcaption>Mercyland Academy — programs flyer</figcaption></figure>
+          <figure data-brand="ut"><img src="work/social/ut_hiring.jpg" alt="Universal Transportation driver recruitment flyer" loading="lazy" width="1080" height="1350"><figcaption>Universal Transportation — driver recruitment</figcaption></figure>
+          <figure data-brand="pewpay"><img src="work/social/pewpay_treasurer.jpg" alt="PewPay product feature post" loading="lazy" width="1080" height="1350"><figcaption>PewPay — product feature</figcaption></figure>
+          <figure data-brand="fulcheezy"><img src="work/social/fulcheezy_festival.jpg" alt="Fulcheezy Organics event flyer" loading="lazy" width="941" height="1672"><figcaption>Fulcheezy Organics — event flyer</figcaption></figure>
+          <figure data-brand="agc"><img src="work/social/agc_bash.jpg" alt="Amazing Grace Chapel back to school bash flyer" loading="lazy" width="1100" height="619"><figcaption>Amazing Grace Chapel — event flyer</figcaption></figure>
+          <figure data-brand="alwize"><img src="work/social/alwize_services.jpg" alt="alwize brand services post" loading="lazy" width="1100" height="1100"><figcaption>alwize — brand post</figcaption></figure>
+          <figure data-brand="mercyland"><img src="work/social/mercyland_enroll.jpg" alt="Mercyland Academy enrollment flyer" loading="lazy" width="1024" height="1536"><figcaption>Mercyland Academy — enrollment flyer</figcaption></figure>
+          <figure data-brand="goldenthreads"><img src="work/social/goldenthreads_box.jpg" alt="Golden Threads Gifts gift box flyer" loading="lazy" width="1100" height="1374"><figcaption>Golden Threads Gifts — gift box flyer</figcaption></figure>
+          <figure data-brand="ut"><img src="work/social/ut_backtoschool.jpg" alt="Universal Transportation back to school flyer" loading="lazy" width="1080" height="1350"><figcaption>Universal Transportation — back-to-school</figcaption></figure>
+          <figure data-brand="lafricana"><img src="work/lafricana_ad.jpg" alt="L'Africana menu campaign" loading="lazy" width="1000" height="1500"><figcaption>L'Africana — menu campaign</figcaption></figure>
+          <figure data-brand="pewpay"><img src="work/social/pewpay_verse.jpg" alt="PewPay scripture series post" loading="lazy" width="1080" height="1350"><figcaption>PewPay — scripture series</figcaption></figure>
+          <figure data-brand="alwize"><img src="work/social/alwize_pricing.jpg" alt="alwize pricing post" loading="lazy" width="1100" height="1375"><figcaption>alwize — pricing post</figcaption></figure>
+          <figure data-brand="agc"><img src="work/social/agc_bbq.jpg" alt="Amazing Grace Chapel family BBQ flyer" loading="lazy" width="1100" height="618"><figcaption>Amazing Grace Chapel — event flyer</figcaption></figure>
+          <figure data-brand="fulcheezy"><img src="work/fulcheezy_ad.jpg" alt="Fulcheezy product ad" loading="lazy" width="1054" height="1492"><figcaption>Fulcheezy Organics — product ad</figcaption></figure>
+          <figure data-brand="alwize"><img src="work/social/alwize_automation.jpg" alt="alwize automation explainer" loading="lazy" width="1100" height="733"><figcaption>alwize — automation explainer</figcaption></figure>
+          <figure data-brand="alwize"><img src="work/social/alwize_nowebsite.jpg" alt="alwize website offer post" loading="lazy" width="1100" height="1375"><figcaption>alwize — website offer</figcaption></figure>
+          <figure data-brand="alwize"><img src="work/social/alwize_steps.jpg" alt="alwize how it works post" loading="lazy" width="1100" height="1375"><figcaption>alwize — how it works</figcaption></figure>
+        </div>
+      </div>
+
+      <div id="social-videos" class="pf-hidden">
+        <div class="vid-grid">
+          <figure class="vid-card"><video controls preload="none" playsinline poster="work/poster_studio.jpg"><source src="work/fulcheezy_studio.mp4" type="video/mp4"></video><figcaption>Fulcheezy — studio product film</figcaption></figure>
+          <figure class="vid-card"><video controls preload="none" playsinline poster="work/poster_apply.jpg"><source src="work/fulcheezy_apply.mp4" type="video/mp4"></video><figcaption>Fulcheezy — lifestyle reel</figcaption></figure>
+          <figure class="vid-card"><video controls preload="none" playsinline poster="work/poster_story1.jpg"><source src="work/alwize_story1.mp4" type="video/mp4"></video><figcaption>alwize animated series — ep. 1</figcaption></figure>
+          <figure class="vid-card"><video controls preload="none" playsinline poster="work/poster_story2.jpg"><source src="work/alwize_story2.mp4" type="video/mp4"></video><figcaption>alwize animated series — ep. 2</figcaption></figure>
+          <figure class="vid-card"><video controls preload="none" playsinline poster="work/poster_story3.jpg"><source src="work/alwize_story3.mp4" type="video/mp4"></video><figcaption>alwize animated series — ep. 3</figcaption></figure>
+          <!-- MORE SOCIAL VIDEOS GO HERE -->
+        </div>
+
+        <div class="cat" style="margin-top:3rem">
+          <div class="cat-head"><h3>on instagram</h3></div>
+          <p class="pf-note" style="margin-bottom:1.2rem">Client reels we produced, live on their feeds.</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem;align-items:start">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Db50hxDPb79/" data-instgrm-version="14" style="background:#fff;border-radius:12px;margin:0;max-width:540px;min-width:300px;width:100%"><div style="padding:2.2rem 1.4rem;text-align:center"><a href="https://www.instagram.com/reel/Db50hxDPb79/" target="_blank" rel="noopener" style="font-family:Poppins,sans-serif;font-weight:500;color:#12808E">View this reel on Instagram &rarr;</a></div></blockquote>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Ddb-er4Dxha/" data-instgrm-version="14" style="background:#fff;border-radius:12px;margin:0;max-width:540px;min-width:300px;width:100%"><div style="padding:2.2rem 1.4rem;text-align:center"><a href="https://www.instagram.com/reel/Ddb-er4Dxha/" target="_blank" rel="noopener" style="font-family:Poppins,sans-serif;font-weight:500;color:#12808E">View this reel on Instagram &rarr;</a></div></blockquote>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dc4NheyiRfe/" data-instgrm-version="14" style="background:#fff;border-radius:12px;margin:0;max-width:540px;min-width:300px;width:100%"><div style="padding:2.2rem 1.4rem;text-align:center"><a href="https://www.instagram.com/reel/Dc4NheyiRfe/" target="_blank" rel="noopener" style="font-family:Poppins,sans-serif;font-weight:500;color:#12808E">View this reel on Instagram &rarr;</a></div></blockquote>
+            <!-- MORE INSTAGRAM REELS GO HERE -->
+          </div>
+          <script async src="https://www.instagram.com/embed.js"></script>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3.5rem;border-top:1px solid rgba(255,255,255,.12);padding-top:2.2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between">
+      <p style="color:#C7D6DA;max-width:46ch">Want work like this for your business? It starts with one short form.</p>
+      <a href="index.html#contact" class="btn btn-primary">Get started</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a href="index.html" class="wordmark"><span class="dot"></span>alwize</a>
+        <p class="tagline">marketing that runs itself</p>
+      </div>
+      <nav>
+        <a href="index.html#how">How it works</a>
+        <a href="work.html">Work</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Get started</a>
+      </nav>
+    </div>
+    <div class="meta">
+      <span>© 2026 alwize. All rights reserved. · <a href="terms.html#terms">Terms</a> · <a href="terms.html#privacy">Privacy</a></span>
+      <span><a href="mailto:ask@getalwize.com">ask@getalwize.com</a> · <a href="https://instagram.com/getalwize">@getalwize</a> · getalwize.com</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><img src="" alt="Enlarged work sample"></div>
+
+<script>
+// Tabs
+const tabs = document.querySelectorAll('.pf-tab');
+const panels = {websites:'panel-websites',brandkits:'panel-brandkits',social:'panel-social'};
+function openTab(name){
+  tabs.forEach(t=>t.classList.toggle('active',t.dataset.tab===name));
+  Object.entries(panels).forEach(([k,id])=>document.getElementById(id).classList.toggle('active',k===name));
+}
+tabs.forEach(t=>t.addEventListener('click',()=>{openTab(t.dataset.tab);history.replaceState(null,'','#'+t.dataset.tab);}));
+if(location.hash){const h=location.hash.slice(1);if(panels[h])openTab(h);}
+
+// Social sub-tabs
+document.querySelectorAll('.pf-subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.pf-subtab').forEach(x=>x.classList.toggle('active',x===b));
+  document.getElementById('social-images').classList.toggle('pf-hidden',b.dataset.subtab!=='images');
+  document.getElementById('social-videos').classList.toggle('pf-hidden',b.dataset.subtab!=='videos');
+}));
+
+// Brand filter chips
+document.querySelectorAll('.pf-chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.pf-chip').forEach(x=>x.classList.toggle('active',x===c));
+  const b=c.dataset.brand;
+  document.querySelectorAll('#socialGallery figure').forEach(f=>{
+    f.style.display=(b==='all'||f.dataset.brand===b)?'':'none';
+  });
+}));
+
+// Nav toggle + lightbox (page-local; script.js is homepage-specific)
+document.getElementById('navToggle').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+const lb=document.getElementById('lb'),lbImg=lb.querySelector('img');
+document.querySelectorAll('.gallery img').forEach(img=>img.addEventListener('click',()=>{lbImg.src=img.src;lb.classList.add('open');}));
+lb.addEventListener('click',()=>lb.classList.remove('open'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open');});
+</script>
+</body>
+</html>
