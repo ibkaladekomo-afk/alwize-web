@@ -333,3 +333,9 @@ h3{font-size:1.28rem;letter-spacing:-.01em}
   .btn:hover,.card:hover,.feat:hover,.step:hover{transform:none}
   .hero-bg{display:none}
 }
+
+/* hero announcement: links to Alwize Front Office */
+.announce{display:inline-flex;align-items:center;gap:.6rem;max-width:100%;padding:.45rem .95rem .45rem .45rem;border:1px solid rgba(45,212,191,.45);border-radius:999px;background:rgba(14,58,70,.55);color:#E6F4F2;font-size:.95rem;line-height:1.35;text-decoration:none;text-shadow:none;backdrop-filter:blur(6px);transition:border-color .2s,transform .2s}
+.announce:hover{border-color:var(--aqua);transform:translateY(-1px)}
+.announce-tag{flex:none;padding:.18rem .6rem;border-radius:999px;background:var(--aqua);color:var(--aqua-ink);font-family:var(--font-head);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:560px){.announce{font-size:.86rem;text-align:left}}
